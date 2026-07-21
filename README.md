@@ -19,13 +19,25 @@ Replace this paragraph with your own summary of what your version does.
 
 Explain your design in plain language.
 
-Some prompts to answer:
+The recommender system uses information from both the song catalog and the user's taste profile to generate personalized recommendations.
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+Each `Song` stores several features including:
+- Genre
+- Mood
+- Energy
+- Tempo (BPM)
+- Valence
+- Danceability
+- Acousticness
+
+The `UserProfile` stores the user's preferred values for these same features.
+
+To calculate a recommendation score, the recommender compares each song's attributes to the user's preferences. Genre and mood use exact matching, while numerical features such as energy, tempo, valence, danceability, and acousticness are scored based on how close they are to the user's preferred values. Each feature is multiplied by a weight, with genre and mood receiving the highest weights because they have the greatest influence on musical preference.
+
+After every song receives a score, the songs are sorted from highest to lowest score. The highest-scoring songs become the recommended songs shown to the user.
+
+Real recommendation systems work similarly but on a much larger scale. Instead of comparing only song attributes, services such as Spotify and YouTube also analyze user behavior including likes, skips, listening history, playlists, watch time, and interactions from millions of users. They often combine content-based filtering with collaborative filtering and machine learning models to provide more personalized recommendations.
+
 
 You can include a simple diagram or bullet list if helpful.
 
