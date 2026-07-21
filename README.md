@@ -119,6 +119,63 @@ Night Drive Loop - Score: 0.95
 Because: energy similarity (+0.95)
 ```
 
+## Sample Recommendation Output Phase 4 Step 1
+```
+Loaded songs: 20
+
+=== High-Energy Pop ===
+
+Sunrise City - Score: 3.92
+Because: genre match (+2.0), mood match (+1.0), energy similarity (+0.92)
+
+Gym Hero - Score: 2.97
+Because: genre match (+2.0), energy similarity (+0.97)
+
+Tokyo Lights - Score: 1.92
+Because: mood match (+1.0), energy similarity (+0.92)
+
+Rooftop Lights - Score: 1.86
+Because: mood match (+1.0), energy similarity (+0.86)
+
+Storm Runner - Score: 0.99
+Because: energy similarity (+0.99)
+
+
+=== Chill Lofi ===
+
+Library Rain - Score: 2.95
+Because: genre match (+2.0), energy similarity (+0.95)
+
+Focus Flow - Score: 2.90
+Because: genre match (+2.0), energy similarity (+0.90)
+
+Midnight Coding - Score: 2.88
+Because: genre match (+2.0), energy similarity (+0.88)
+
+Deep Waters - Score: 0.99
+Because: energy similarity (+0.99)
+
+Spacewalk Thoughts - Score: 0.98
+Because: energy similarity (+0.98)
+
+
+=== Deep Intense Rock ===
+
+Storm Runner - Score: 3.99
+Because: genre match (+2.0), mood match (+1.0), energy similarity (+0.99)
+
+Broken Promises - Score: 2.84
+Because: genre match (+2.0), energy similarity (+0.84)
+
+Gym Hero - Score: 1.97
+Because: mood match (+1.0), energy similarity (+0.97)
+
+Fire Within - Score: 1.91
+Because: mood match (+1.0), energy similarity (+0.91)
+
+Electric Pulse - Score: 0.94
+Because: energy similarity (+0.94)
+
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
 ---

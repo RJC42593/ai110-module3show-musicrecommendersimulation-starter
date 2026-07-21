@@ -2,6 +2,7 @@ import csv
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
 
+
 @dataclass
 class Song:
     """
@@ -19,6 +20,7 @@ class Song:
     danceability: float
     acousticness: float
 
+
 @dataclass
 class UserProfile:
     """
@@ -29,6 +31,7 @@ class UserProfile:
     favorite_mood: str
     target_energy: float
     likes_acoustic: bool
+    
 
 class Recommender:
     """

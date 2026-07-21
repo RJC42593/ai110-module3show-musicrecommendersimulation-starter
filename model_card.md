@@ -61,30 +61,22 @@ Prompts:
 
 ## 6. Limitations and Bias 
 
-Where the system struggles or behaves unfairly. 
-
-Prompts:  
-
-- Features it does not consider  
-- Genres or moods that are underrepresented  
-- Cases where the system overfits to one preference  
-- Ways the scoring might unintentionally favor some users  
-
+This recommender may create a filter bubble because genre receives the largest weight, so songs outside the user's preferred genre can be overlooked even when their mood and energy are similar. The system also uses a small catalog of only 20 songs, and some genres have more examples than others, which can make recommendations less balanced. Its scoring logic only considers genre, mood, and energy, even though the dataset also includes tempo, valence, danceability, and acousticness. As a result, users with more complex or changing musical tastes may receive overly narrow recommendations.
 ---
 
 ## 7. Evaluation  
 
-How you checked whether the recommender behaved as expected. 
+I tested the recommender using three different user profiles: High-Energy Pop, Chill Lofi, and Deep Intense Rock. For each profile, I checked whether the top recommendations matched the user's preferred genre, mood, and energy level.
 
-Prompts:  
+The results generally matched my expectations. The High-Energy Pop profile returned upbeat pop songs, the Chill Lofi profile recommended calmer low-energy tracks, and the Deep Intense Rock profile ranked rock songs with high energy at the top. I also tested changing the scoring weights by increasing the importance of energy and reducing the importance of genre. This caused songs with similar energy levels to move higher in the rankings, showing that the recommender responds appropriately when the scoring logic changes.
 
-- Which user profiles you tested  
-- What you looked for in the recommendations  
-- What surprised you  
-- Any simple tests or comparisons you ran  
+One interesting observation was that songs like "Gym Hero" appeared in multiple recommendation lists because their energy level closely matched several user profiles, even when the genre was not a perfect match.
 
-No need for numeric metrics unless you created some.
+Comparing High-Energy Pop and Chill Lofi, the recommendations changed from upbeat, energetic pop songs to calmer, low-energy tracks. This makes sense because the preferred genre, mood, and target energy were very different.
 
+Comparing High-Energy Pop and Deep Intense Rock, both profiles received high-energy songs, but the rock profile prioritized rock songs while the pop profile prioritized pop songs because genre has the highest weight in the scoring system.
+
+Comparing Chill Lofi and Deep Intense Rock, the recommendations were almost completely different. The Chill Lofi profile favored relaxing, low-energy songs, while the Deep Intense Rock profile favored intense, high-energy rock tracks, showing that the recommender responds appropriately to different user preferences.
 ---
 
 ## 8. Future Work  
