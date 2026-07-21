@@ -3,59 +3,30 @@
 ## 1. Model Name  
 
 Give your model a short, descriptive name.  
-Example: **VibeFinder 1.0**  
+Example: **TuneMatch 1.0**  
 
 ---
 
 ## 2. Intended Use  
 
-Describe what your recommender is designed to do and who it is for. 
-
-Prompts:  
-
-- What kind of recommendations does it generate  
-- What assumptions does it make about the user  
-- Is this for real users or classroom exploration  
+This recommender suggests songs based on a user's preferred genre, mood, and energy level. It is designed as a classroom project to demonstrate how a simple recommendation system works, not for real-world music streaming. 
 
 ---
 
 ## 3. How the Model Works  
 
-Explain your scoring approach in simple language.  
-
-Prompts:  
-
-- What features of each song are used (genre, energy, mood, etc.)  
-- What user preferences are considered  
-- How does the model turn those into a score  
-- What changes did you make from the starter logic  
-
-Avoid code here. Pretend you are explaining the idea to a friend who does not program.
-
+The system compares each song to the user's preferences. It gives points for matching the preferred genre and mood, then adds extra points based on how close the song's energy level is to the user's target. The songs with the highest scores are recommended first.
 ---
 
 ## 4. Data  
 
-Describe the dataset the model uses.  
-
-Prompts:  
-
-- How many songs are in the catalog  
-- What genres or moods are represented  
-- Did you add or remove data  
-- Are there parts of musical taste missing in the dataset  
+The dataset contains 20 songs with features including genre, mood, energy, tempo, valence, danceability, and acousticness. I expanded the starter dataset by adding 10 additional songs. The catalog is still small and does not represent every musical style. 
 
 ---
 
 ## 5. Strengths  
 
-Where does your system seem to work well  
-
-Prompts:  
-
-- User types for which it gives reasonable results  
-- Any patterns you think your scoring captures correctly  
-- Cases where the recommendations matched your intuition  
+The recommender works well when users have clear genre and mood preferences. The recommendations generally matched my expectations during testing, and changing the scoring weights produced noticeable changes in the rankings.  
 
 ---
 
@@ -81,23 +52,14 @@ Comparing Chill Lofi and Deep Intense Rock, the recommendations were almost comp
 
 ## 8. Future Work  
 
-Ideas for how you would improve the model next.  
-
-Prompts:  
-
-- Additional features or preferences  
-- Better ways to explain recommendations  
-- Improving diversity among the top results  
-- Handling more complex user tastes  
+- Add more songs to increase variety.
+- Use additional features such as tempo and danceability in the scoring.
+- Support users who enjoy multiple genres instead of only one favorite.
 
 ---
 
 ## 9. Personal Reflection  
 
-A few sentences about your experience.  
+## 9. Personal Reflection
 
-Prompts:  
-
-- What you learned about recommender systems  
-- Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+I learned that even a simple scoring system can produce useful recommendations and that changing feature weights can significantly affect the results. Using AI helped me write and improve the code more quickly, but I still needed to review the logic, test the program, and fix errors to make sure everything worked correctly. I was surprised that a basic algorithm using only genre, mood, and energy could produce recommendations that felt reasonable. If I continued this project, I would add more songs and include features like tempo, danceability, and acousticness to create more accurate and diverse recommendations.
