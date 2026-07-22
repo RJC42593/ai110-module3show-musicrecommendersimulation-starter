@@ -58,7 +58,6 @@ Comparing Chill Lofi and Deep Intense Rock, the recommendations were almost comp
 
 ---
 
-## 9. Personal Reflection  
 
 ## 9. Personal Reflection
 

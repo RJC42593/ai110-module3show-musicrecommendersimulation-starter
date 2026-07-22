@@ -1,5 +1,5 @@
 import csv
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple
 from dataclasses import dataclass
 
 
@@ -31,7 +31,7 @@ class UserProfile:
     favorite_mood: str
     target_energy: float
     likes_acoustic: bool
-    
+     
 
 class Recommender:
     """

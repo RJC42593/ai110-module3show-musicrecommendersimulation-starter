@@ -176,44 +176,27 @@ Because: mood match (+1.0), energy similarity (+0.91)
 Electric Pulse - Score: 0.94
 Because: energy similarity (+0.94)
 
-**Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
+
 
 ---
 
 ## Experiments You Tried
 
-Use this section to document the experiments you ran. For example:
-
-- What happened when you changed the weight on genre from 2.0 to 0.5
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
+During testing, I increased the weight of the energy feature and reduced the weight of the genre feature. After rerunning the recommender, songs with energy levels closer to the user's preference ranked higher, even if they were from a different genre. This demonstrated that changing feature weights has a noticeable impact on the final recommendations and confirmed that the scoring system responds as expected.
 
 ---
 
 ## Limitations and Risks
 
-Summarize some limitations of your recommender.
-
-Examples:
-
-- It only works on a tiny catalog
-- It does not understand lyrics or language
-- It might over favor one genre or mood
-
-You will go deeper on this in your model card.
+This recommender only uses a small catalog of 20 songs, so its recommendations are limited. It also relies on only a few song features and does not consider listening history, lyrics, popularity, or recommendations from similar users. Because genre has a relatively high weight, songs from the preferred genre may be ranked above songs that are otherwise very similar.
 
 ---
 
 ## Reflection
 
-Read and complete `model_card.md`:
+Building this project helped me understand how recommendation systems convert user preferences into numerical scores and use those scores to rank results. I learned that even a simple scoring algorithm can produce recommendations that feel useful when the chosen features and weights make sense.
 
-[**Model Card**](model_card.md)
-
-Write 1 to 2 paragraphs here about what you learned:
-
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+I also learned that recommendation systems can introduce bias depending on how features are weighted and what data is available. Testing different user profiles and adjusting the scoring weights showed how small changes in the algorithm can produce different recommendations, highlighting the importance of evaluating and improving AI systems over time.
 
 
 
